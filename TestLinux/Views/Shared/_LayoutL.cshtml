@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> CRGB | @ViewData["Title"] </title>
+
+
+
+
+    <!-- Template Main CSS File -->
+
+    <link rel="stylesheet" href="~/vendor/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="~/vendor/glightbox/css/glightbox.min.css" />
+    <link rel="stylesheet" href="~/vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="~/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/vendor/bootstrap-icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <style type="text/css">
+
+        .loadimg {
+            max-width: 20px;
+            margin-right: 5px;
+            margin-top: -8px;
+           
+        }
+        .mission-and-vision {
+            padding: 35px;
+            background: #cae9fe40;
+            font-style: italic;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .carousel-item a {
+            color:black;
+        }
+        .news {
+            width: 160px
+        }
+
+        .news-scroll a {
+            text-decoration: none
+        }
+
+        .dot {
+            height: 6px;
+            width: 6px;
+            margin-left: 3px;
+            margin-right: 3px;
+            margin-top: 2px !important;
+            background-color: rgb(207, 23, 23);
+            border-radius: 50%;
+            display: inline-block
+        }
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+
+            .videoWrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+    </style>
+</head>
+<body>
+    <section id="topbar" class="d-flex d-none d-sm-block">
+
+
+        <div class="container">
+            <div class="col">
+                <div class="logo">
+
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    <a href="/Home/Index"><img src="~/assets/img/logo.png" alt="" class="img-fluid"></a>
+
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-end">
+                <div class="social-links d-none d-md-flex ">
+                    <a href="mailto:care@cgbank.in"><i class="bi bi-envelope d-flex align-items-center">care@cgbank.in </i> </a>
+                    <a><i class="bi bi-phone d-flex align-items-center ms-4"> 1800 233 2300</i></a>
+                    <a href="#" class="youtube"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======= Header ======= -->
+    <!-- End Header -->
+    
+    @RenderBody()
+
+    <!-- End Footer -->
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/vendor/php-email-form/validate.js"></script>
+    <script src="~/vendor/purecounter/purecounter.js"></script>
+    <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/vendor/waypoints/noframework.waypoints.js"></script>
+
+    <!-- <script src="~/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+    <script src="~/js/news.js"></script>
+    
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

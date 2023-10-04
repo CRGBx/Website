@@ -1,0 +1,102 @@
+﻿@model CPSVisitReport
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_layout2.cshtml";
+    int slno = 0;
+}
+
+<div class="container" style="margin-top:20px;">
+    <b class="align-items-center">Chhattisgarh Rajya Gramin Bank : CSP Visit Report</b>
+    <br/>
+
+Visit Date : @Model.VisitDetails.VisitDate
+<br/>
+System Log Date : @Model.VisitDetails.SystemLogDate
+
+<table class="table table-sm table-bordered">
+    <tr>
+        <td>
+            Name of Employee
+        </td>
+        <td>
+            @Model.EmployeeDetails.EmployeeName (@Model.EmployeeDetails.UserId)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Name of CSP
+        </td>
+        <td>
+            @Model.BCDetails.CSPName
+        </td>
+    </tr>
+    <tr>
+        <td>
+            CSP Address
+        </td>
+        <td>
+            @Model.BCDetails.Address
+        </td>
+    </tr>
+    <tr>
+        <td>
+            CSP Branch Code
+        </td>
+        <td>
+            @Model.BCDetails.BrCode
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Visit Update Location
+        </td>
+        <td>
+            @Model.VisitDetails.Location_lat,@Model.VisitDetails.Location_long
+        </td>
+    </tr>
+
+
+</table>
+<div style="margin-left:15px;margin-top:10px;" class="embed-responsive embed-responsive-1by1">
+    <iframe class="embed-responsive-item" style="width:90%"  src="https://maps.google.com?q=@Model.VisitDetails.Location_lat,@Model.VisitDetails.Location_long&output=svembed">
+
+</iframe>
+
+</div>
+
+<table class="table table-sm table-bordered">
+    <thead>
+        <tr>
+            <th> Sl. No</th>
+           <th> Value Statements</th>
+           <th>Visit Remarks</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        @foreach(var x in Model.VisitRemarks)
+        {
+            slno++;
+            <tr>
+                <td>@slno</td>
+                <td>@x.ValueStatement</td>
+                @if (x.Status == "File")
+                {
+                    <td><img class="img-thumbnail" src="/uploadedImages/@x.RemarksVisitingOfficial" alt="Image"/></td>
+                }
+                else
+                {
+                    <td>@x.RemarksVisitingOfficial</td>
+                }
+                
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+</div>
+

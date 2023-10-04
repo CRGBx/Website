@@ -1,0 +1,88 @@
+﻿@inject CustomIDataProtection _protector
+@model List<Grievance>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+    int sn = 0;
+}
+
+<table class="table table-striped table-bordered" id="dTable">
+    <thead>
+        <tr>
+            <th>
+                S.No.
+            </th>
+            <th>
+                Registered Date
+            </th>
+            <th>
+                Source
+            </th>
+            <th>
+                Branch
+            </th>
+            <th>
+                District
+            </th>
+            <th>
+                ComplaintId
+            </th>
+            <th>
+                Customer Name
+            </th>
+            <th>
+                Mobile NUmber
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                RO Reply
+            </th>
+            <th>
+                Closure Date
+            </th>
+            <th>
+                View
+            </th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderByDescending(a => a.RegisterDate).ToList())
+        {
+            sn++;
+            <tr>
+                <td>@sn</td>
+                <td>@item.RegisterDate</td>
+                <td>@item.ComplaintType</td>
+                <td>@item.Branch</td>
+                <td>@item.District</td>
+                <td>@item.Id</td>
+                <td>@item.ApplicantName</td>
+                <td>@item.MobileNo</td>
+                <td>@item.Status</td>
+                <td>
+                    @if (item.ROReplyDate != null)
+                    {
+                        <span>Yes</span>
+                    }
+                    else
+                    {
+                        <span>No</span>
+                    }
+
+            </td>
+            <td>
+                @if (item.ClosureDate.HasValue)
+                {
+                    <span>@item.ClosureDate.Value.ToShortDateString()</span>
+                }
+            </td>
+            <td><a href="/Deaf/ViewComplaint/@_protector.Decode(item.Id.ToString())">View</a></td>
+        </tr>
+    }
+    </tbody>
+</table>

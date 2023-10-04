@@ -1,0 +1,104 @@
+﻿@model TestLinux.Grievance
+@using AspNetCore.ReCaptcha
+
+@{
+    ViewBag.Title = "Check Status";
+}
+
+<div class="container" style="margin-top:10px;">
+    @using (Html.BeginForm())
+    {
+        @Html.ReCaptcha()
+        @Html.AntiForgeryToken()
+        if (ViewBag.Message != "")
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.Message
+            </div>
+
+        }
+<div class="form-horizontal">
+    <h4>Check Status of Complaint / Grievance</h4>
+    <b>Enter your Greivance / Complaint Id and Mobile Number linked with complaint.</b>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group form-row">
+        @Html.LabelFor(model => model.MobileNo, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.MobileNo, new { htmlAttributes = new { @class = "form-control form-control-sm" } })
+            @Html.ValidationMessageFor(model => model.MobileNo, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group form-row">
+        <label>Greivance Id</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control form-control-sm" } })
+            @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group form-row">
+        <label class="control-label col-md-6 text-danger">@ViewData["CaptchaMessage"]</label>
+        <input type="hidden" name="viewdata" value='@ViewData["_viewdata"]' />
+
+
+    </div>
+
+    <div class="form-group form-row" style="margin-top:10px;">
+        <div class="col-md-2"></div>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="hidden" style="margin-bottom:10px;" name="token" value="@ViewData["Captcha"]" />
+            <input class="form-control" type="text" name="captcha" placeholder="Code" required />
+            <img style="margin-top:10px;" src="data:image/jpeg;base64,@Convert.ToBase64String((byte[])ViewData["CaptchaImage"])" />
+
+        </div>
+    </div>
+
+
+    <div class="form-group form-row" style="margin-top:10px;">
+        <div class="col-md-2"></div>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Search" class="btn btn-primary mx-auto" />
+        </div>
+    </div>
+</div>
+    }
+    </div>
+
+    @section Scripts {
+
+        <script type="text/javascript">
+            $('#Segment').change(function () {
+                //alert($('#Segment option:selected'));
+                if ($('#Segment option:selected').val() == 'TXN') {
+                    $('.digi').show();
+                }
+                else {
+                    $('.digi').hide();
+                }
+            });
+            $('#District').change(function () {
+                $.ajax({
+                    url: "/Home/GetBranch?d=" + $('#District option:selected').val(),
+
+                }).done(function (temp) {
+
+                    var $select = $('#Branch');
+                    $select.find('option').remove();
+                    $.each(temp, function () {
+                        console.log(this);
+                        $select.append('<option value=' + this.Text + '>' + this.Text + '</option>');
+                    });
+
+                });
+
+
+
+            });
+            $(document).ready(function () {
+                $('.digi').hide();
+            });
+        </script>
+    }
+

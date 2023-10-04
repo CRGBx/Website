@@ -1,0 +1,182 @@
+﻿@model Grievance
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_LayoutM.cshtml";
+    var brcode = ViewBag.brcode;
+}
+
+<div class="container" style="margin-top:10px;">
+    <div class="row">
+        <div class="col-lg-6 col-12">
+            <h4>View Complaint</h4>
+
+        </div><!-- col -->
+
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-horizontal col-lg-6">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group form-row">
+
+        <label class="control-label col-md-6">Complaint Id</label>
+        <div class="col-md-10">
+            <input readonly type="text" name="Id" value="@Model.Id" class="form-control form-control-sm" />
+        </div>
+    </div>
+    <div class="form-group form-row">
+
+        <label class="control-label col-md-6">Applicant Name</label>
+        <div class="col-md-10">
+            <input readonly type="text" name="ApplicantName" value="@Model.ApplicantName" class="form-control form-control-sm" />
+        </div>
+    </div>
+    <div class="form-group form-row">
+        <label class="control-label col-md-6">Mobile Number</label>
+        <div class="col-md-10">
+            <input readonly type="text" name="MobileNo" value="@Model.MobileNo" class="form-control form-control-sm" />
+        </div>
+    </div>
+    <div class="form-group form-row">
+        <label class="control-label col-md-6">Current Status</label>
+        <div class="col-md-10">
+            <input readonly type="text" value="@Model.Status" class="form-control form-control-sm" />
+        </div>
+    </div>
+    <div class="form-group form-row">
+        <label class="control-label col-md-6">Complaint Type</label>
+        <div class="col-md-10">
+            <input readonly type="text" name="Segment" value="@Model.Segment" class="form-control form-control-sm" />
+        </div>
+    </div>
+    <div class="form-group form-row">
+        <label class="control-label col-md-6">Account Number</label>
+        <div class="col-md-10">
+            <input readonly type="text" name="AccountNumber" value="@Model.AccountNumber" class="form-control form-control-sm" />
+        </div>
+    </div>
+    <div class="form-group form-row">
+        <label class="control-label col-md-6">Transaction Type</label>
+        <div class="col-md-10">
+            <input readonly type="text" name="DigitalTxn" value="@Model.DigitalTxn" class="form-control form-control-sm" />
+        </div>
+    </div>
+    <div class="form-group form-row">
+        <label class="control-label col-md-6">Transaction Date</label>
+        <div class="col-md-10">
+            <input readonly type="text" name="TransactionDate" value="@Model.TransactionDate" class="form-control form-control-sm" />
+        </div>
+    </div>
+    <div class="form-group form-row">
+        <label class="control-label col-md-6">Transaction Amount</label>
+        <div class="col-md-10">
+            <input readonly type="text" name="AmountInvolved" value="@Model.AmountInvolved" class="form-control form-control-sm" />
+        </div>
+    </div>
+    <div class="form-group form-row">
+        <label class="control-label col-md-6">Complaint</label>
+        <div class="col-md-10">
+            <textarea readonly type="text" name="Complaint" value="@Model.Complaint" class="form-control form-control-sm" rows="3">@Model.Complaint</textarea>
+        </div>
+    </div>
+
+
+    @if (brcode.StartsWith("099") == false && brcode != "09900")
+    {
+        <div class="form-group form-row">
+            <label class="control-label col-md-6">Branch Reply</label>
+            <div class="col-md-10">
+                <textarea type="text" name="InternalReply" required value="@Model.InternalReply" class="form-control form-control-sm" rows="3">@Model.InternalReply</textarea>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="form-group form-row">
+            <label class="control-label col-md-6">Branch Reply</label>
+            <div class="col-md-10">
+                <textarea readonly type="text" name="InternalReply" value="@Model.InternalReply" class="form-control form-control-sm" rows="3">@Model.InternalReply</textarea>
+            </div>
+        </div>
+    }
+
+
+
+    @if (brcode.StartsWith("099") && brcode != "09900")
+    {
+        <div class="form-group form-row">
+            <label class="control-label col-md-6">RO Reply</label>
+            <div class="col-md-10">
+                <textarea type="text" name="ROReply" required value="@Model.ROReply" class="form-control form-control-sm" rows="3">@Model.ROReply</textarea>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="form-group form-row">
+            <label class="control-label col-md-6">RO Reply</label>
+            <div class="col-md-10">
+                <textarea readonly type="text" name="ROReply" value="@Model.ROReply" class="form-control form-control-sm" rows="3">@Model.ROReply</textarea>
+            </div>
+        </div>
+    }
+
+
+
+    @if (brcode == "09900")
+    {
+        <div class="form-group form-row">
+            <label class="control-label col-md-6">HO Reply</label>
+            <div class="col-md-10">
+                <textarea type="text" name="HOReply" value="@Model.HOReply" required class="form-control form-control-sm" rows="3">@Model.HOReply</textarea>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="form-group form-row">
+            <label class="control-label col-md-6">HO Reply</label>
+            <div class="col-md-10">
+                <textarea readonly type="text" name="HOReply"  value="@Model.HOReply" class="form-control form-control-sm" rows="3">@Model.HOReply</textarea>
+            </div>
+        </div>
+    }
+
+    <div class="form-group form-row">
+        <label class="control-label col-md-6">Change Status</label>
+        <div class="col-md-10">
+            <select class="form-control" name="Status">
+                <option selected="selected" value="@Model.Status">
+                    @Model.Status
+                </option>
+                <option value="Processed">
+                    Processed
+                </option>
+                @if (brcode == "09900" || brcode.StartsWith("099"))
+                {
+                    <option value="Closed">
+                        Closed
+                    </option>
+                }
+
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group form-row" style="margin-top:10px;">
+        <div class="col-md-6"></div>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-primary mx-auto" />
+        </div>
+    </div>
+</div>
+    }
+
+</div>

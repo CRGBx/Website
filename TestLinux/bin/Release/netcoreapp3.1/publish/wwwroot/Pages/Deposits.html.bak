@@ -1,0 +1,104 @@
+﻿<h3 class="innerhd">
+    Deposit products
+</h3>
+<div class="row" style="margin-top:10px;">
+    <p>
+        We,strive to fulfill the dreams of masses and we are dedicated to serve all your needs - whether an investment of your surplus funds or to create a fund for your children’s' education and marriage. You will find a product from CRGB that suits your requirement, delivered at a branch close to you.
+
+
+        Open an account with any of our branches, all of them are working on CBS platform, and realize the advantage of our personalized services.
+    </p>
+    
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+            <b><i class="bi-caret-right-fill"></i>Current Account</b>
+            <div class="d-flex flex-row w-100 justify-content-between">
+                <small class="col-7">
+                    Convenient for business people, traders etc., to have Current Account. Withdrawls and deposits can be made in Current Account any number of times. Current Account is not for saving or earnig interest unlike Savings Bank. Convenience of the customer in parking his liquid funds for any time withdrawal, is the primary objective.
+                </small>
+                
+                <ul class="col-5">
+                    <li>Personalised Cheque Books</li>
+                    <li>Corporate Internet Banking</li>
+                    
+                </ul>
+            </div>
+
+
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+            <b><i class="bi-caret-right-fill"></i>Current Account (SARAL) </b>
+            <div class="d-flex w-100 justify-content-between">
+                <small class="mb-1">Convenient for SMEs, to have Current Account. Withdrawls and deposits can be made in Current Account any number of times.  SARAL Current account provides relaxation in Monthly Average balance</small>
+
+            </div>
+
+
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+            <b><i class="bi-caret-right-fill"></i>Savings Account</b>
+            <div class="d-flex w-100 justify-content-between">
+                <small class="mb-1">Convenient for business people, traders etc., to have Current Account. Withdrawls and deposits can be made in Current Account any number of times. Current Account is not for saving or earnig interest unlike Savings Bank. Convenience of the customer in parking his liquid funds for any time withdrawal, is the primary objective</small>
+
+            </div>
+
+
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+            <b><i class="bi-caret-right-fill"></i>Salary Savings Account</b>
+            <div class="d-flex w-100 justify-content-between">
+                <small class="mb-1">Convenient for business people, traders etc., to have Current Account. Withdrawls and deposits can be made in Current Account any number of times. Current Account is not for saving or earnig interest unlike Savings Bank. Convenience of the customer in parking his liquid funds for any time withdrawal, is the primary objective</small>
+
+            </div>
+
+
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+            <b><i class="bi-caret-right-fill"></i>Pradhan Mantri Jan Dhan Account</b>
+            <div class="d-flex w-100 justify-content-between">
+                <small class="mb-1">Convenient for business people, traders etc., to have Current Account. Withdrawls and deposits can be made in Current Account any number of times. Current Account is not for saving or earnig interest unlike Savings Bank. Convenience of the customer in parking his liquid funds for any time withdrawal, is the primary objective</small>
+
+            </div>
+
+
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+            <b><i class="bi-caret-right-fill"></i>Surbhi Savings Account</b>
+            <div class="d-flex w-100 justify-content-between">
+                <small class="mb-1">Convenient for business people, traders etc., to have Current Account. Withdrawls and deposits can be made in Current Account any number of times. Current Account is not for saving or earnig interest unlike Savings Bank. Convenience of the customer in parking his liquid funds for any time withdrawal, is the primary objective</small>
+
+            </div>
+
+
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+            <b><i class="bi-caret-right-fill"></i>Recurring Deposit Account</b>
+            <div class="d-flex w-100 justify-content-between">
+                <small class="mb-1">Convenient for business people, traders etc., to have Current Account. Withdrawls and deposits can be made in Current Account any number of times. Current Account is not for saving or earnig interest unlike Savings Bank. Convenience of the customer in parking his liquid funds for any time withdrawal, is the primary objective</small>
+
+            </div>
+
+
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+            <b><i class="bi-caret-right-fill"></i>Term Deposits Account</b>
+            <div class="d-flex w-100 justify-content-between">
+                <small class="mb-1">Convenient for business people, traders etc., to have Current Account. Withdrawls and deposits can be made in Current Account any number of times. Current Account is not for saving or earnig interest unlike Savings Bank. Convenience of the customer in parking his liquid funds for any time withdrawal, is the primary objective</small>
+
+            </div>
+
+
+        </li>
+        <li class="list-group-item list-group-item-action flex-column align-items-start">
+            <b><i class="bi-caret-right-fill"></i>Tax Saving Deposit</b>
+            <div class="d-flex w-100 justify-content-between">
+                <small class="mb-1">Convenient for business people, traders etc., to have Current Account. Withdrawls and deposits can be made in Current Account any number of times. Current Account is not for saving or earnig interest unlike Savings Bank. Convenience of the customer in parking his liquid funds for any time withdrawal, is the primary objective</small>
+
+            </div>
+
+
+        </li>
+    </ul>
+    
+    
+</div>

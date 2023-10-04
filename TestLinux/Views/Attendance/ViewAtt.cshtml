@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<AttendanceProfie>  
+@{
+    Layout = "_Layout2.cshtml";
+    int sno = 0;
+}
+
+<table class="table table-responsive-sm table-bordered">
+    <thead>
+        <tr>
+            <th>S.No.</th>
+            <th>Date</th>
+            <th>Attendance</th>
+            <th>Remark</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+	{
+        sno++;
+		<tr>
+            <td>@sno</td>
+            <td>@item.ForDate.ToString("dd-MM-yyyy")</td>   
+
+            <td>@item.Attendance</td>
+            <td>@item.Remarks</td>
+        </tr>
+	}
+    </tbody>
+</table>

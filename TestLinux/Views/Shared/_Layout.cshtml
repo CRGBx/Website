@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> CRGB | @ViewData["Title"] </title>
+
+
+
+
+    <!-- Template Main CSS File -->
+
+    <link rel="stylesheet" href="~/vendor/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="~/vendor/glightbox/css/glightbox.min.css" />
+    <link rel="stylesheet" href="~/vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" href="~/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/vendor/bootstrap-icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link href="~/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <style type="text/css">
+
+        .loadimg {
+            max-width: 20px;
+            margin-right: 5px;
+            margin-top: -8px;
+           
+        }
+        .mission-and-vision {
+            padding: 35px;
+            background: #cae9fe40;
+            font-style: italic;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .carousel-item a {
+            color:black;
+        }
+        .news {
+            width: 160px
+        }
+
+        .news-scroll a {
+            text-decoration: none
+        }
+
+        .dot {
+            height: 6px;
+            width: 6px;
+            margin-left: 3px;
+            margin-right: 3px;
+            margin-top: 2px !important;
+            background-color: rgb(207, 23, 23);
+            border-radius: 50%;
+            display: inline-block
+        }
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+
+            .videoWrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+    </style>
+</head>
+<body>
+    <section id="topbar" class="d-flex d-none d-sm-block">
+
+
+        <div class="container">
+            <div class="col">
+                <div class="logo">
+
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    <a href="/Home/Index"><img src="~/assets/img/logo.png" alt="" class="img-fluid"></a>
+
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-end">
+                <div class="social-links d-none d-md-flex ">
+                    <a href="mailto:care@cgbank.in"><i class="bi bi-envelope d-flex align-items-center">care@cgbank.in </i> </a>
+                    <a><i class="bi bi-phone d-flex align-items-center ms-4"> 1800 233 2300</i></a>
+                    <a href="#" class="youtube"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+
+
+            <a style="padding-left:110px;" href="/Home/Index">
+                <h3 style="font-weight: 900; font-size: 20px; margin-bottom: 0px;color: #165bb1;" class="d-none d-sm-block">Chhattisgarh Rajya Gramin Bank</h3>
+
+                <small style="font-weight: 700; color: #165bb1; " class="d-none d-sm-block">Sponsored by State Bank of India</small>
+            </a>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/Home/Index"><img src="~/assets/img/logo.png" alt="" style="max-height:50px;" class="d-block d-sm-none img-fluid"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent , #navbarSupportedContent1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"> <i class="bi bi-list mobile-nav-toggle"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="/Home/Index"><i class="bi-house-fill" style="font-size:20px;"></i></a></li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/Home/AboutUs">Overview</a></li>
+                                    <li><a class="dropdown-item" href="/Home/Page/BoD">Board Of Directors</a></li>
+                                    <li><a class="dropdown-item" href="/Home/Page/Administration">Team CRGB</a></li>
+                                    <li><a class="dropdown-item" href="/Home/Page/Offices">Administrative Offices</a></li>
+                                    <li><a class="dropdown-item" href="/Home/Page/Branch">Branch Details</a></li>
+                                    <li><a class="dropdown-item" href="/Home/Page/Financials">Financial Reports</a></li>
+
+                                    <li><a class="dropdown-item" href="/Home/Map">Branch Map</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="/Home/Page/Tenders">Tenders &amp; Empanelments</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/Home/Page/Career">Career</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/Home/AddNew">Grievance</a></li>
+                            <li class="nav-item dropdown">
+
+                                <a class="nav-link " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>Links</span> <i class="bi bi-chevron-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                                    <li><a class="dropdown-item" href="https://www.cedgerrbmb.in/CRGB/">Internet Banking (Login)</a></li>
+                                    <li><a class="dropdown-item" href="https://cedgerrbmb.in/CRGB/loadUserRegistrationEnquiry">Internet Banking (New Registration)</a></li>
+                                    <li><a class="dropdown-item" href="https://outlook.office.com/mail/">Email</a></li>
+                                    <li><a class="dropdown-item" href="/Deaf/Login">Staff Login</a></li>
+                                    <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.mbanking.crgb.crgb&hl=en_IN&gl=US&pli=1">Download Mobile Banking</a></li>
+                                    <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.cedge.crgb">Download DISA CRGB</a></li>
+                                    <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.cedge.crgbpositivepay">Positve Pay</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="/Home/Page/Download">Downloads</a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </header><!-- End Header -->
+    <header id="header1" class="d-flex align-items-center" >
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" style="padding-top:2px;padding-bottom:2px;color:#fff">
+                <div class="container-fluid">
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/Home/Page/Deposits"> <img class="loadimg" src="~/assets/img/savings.svg" alt=""> Deposit Products </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/Home/Page/Loans"> <img class="loadimg" src="~/assets/img/loan.svg" alt=""> Loan Products </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/Home/Page/IT"> <img class="loadimg" src="~/assets/img/atmcard.svg" alt=""> Tech Products &amp; Services </a>
+                            </li>
+
+                            <li>
+                                <a class="nav-link" aria-current="page" href="https://mynps.nsdl.com/myNPS/NationalPensionSystem.html?appType=main&authId=SzZZK1NVVW00cFQycm9VZUJOWnBUZz09"> <img class="loadimg" src="~/assets/img/nps.svg" alt=""> NPS Registration </a>
+                               
+                            </li>
+                            <li>
+                                <a class="nav-link" aria-current="page" style=" padding-right: 10px;padding-left: 10px; margin-right: 8px;margin-left: 8px;" href="https://www.jansamarth.in/"> <img class="loadimg" src="~/assets/img/jan-samarth-logo.svg" alt=""> Jansamarth  </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="https://www.cedgerrbmb.in/CRGB/" target="_blank"> <img class="loadimg" src="~/assets/img/inb.svg" alt=""> Internet Banking(Login) </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="https://cedgerrbmb.in/CRGB/loadUserRegistrationEnquiry" target="_blank"> <img class="loadimg" src="~/assets/img/inb2.svg" alt=""> Internet Banking Registration </a>
+                            </li>
+                            @*<li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#"> <img class="loadimg" src="~/assets/img/calendarw.svg" alt=""> Calendar </a>
+                            </li>*@
+                            
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+
+        </div>
+    </header>
+    @RenderBody()
+
+    <footer id="footer">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4>Locations</h4>
+                        <p>Search Nearest Branch or business outlets</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <form action="/Home/BranchLocator" method="post">
+                            <input type="text" name="query"><input type="submit" value="Search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/Index">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Deaf/">DEAF Account List</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/AboutUs">About Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/Page/Financials">Annual Reports</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/AddNew">Customer Grievance</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Policies</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/Page/RTI">RTI Act</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/Home/Page/Policies">Privacy Policy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/assets/ios.pdf">Integrated Ombudsman Scheme</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Head Office</h4>
+                        <p>
+                            Corporate Office <br>
+                            Sector 24, Atal Nagar , Naya Raipur<br>
+                            Chhattisgarh <br><br>
+                            <strong>Phone:</strong> 1800-233-2300<br>
+                            <strong>Email:</strong> care@cgbank.in<br>
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <h3>About CRGB</h3>
+                        <p>CRGB is scheduled bank , sponsored by STATE BANK OF INDIA</p>
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-thumbnail" src="~/assets/img/dicgc.png" />
+                                <b>CRGB is registered with DICGC</b>
+                            </div>
+                            <div class="col">
+                                <img class="img-thumbnail" src="~/assets/img/dicgc1.png" />
+                            </div>
+                        </div>
+                        
+                        
+                       
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>CRGB</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+
+                Developed by CRGB IT Department v1.0
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/vendor/php-email-form/validate.js"></script>
+    <script src="~/vendor/purecounter/purecounter.js"></script>
+    <script src="~/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/vendor/waypoints/noframework.waypoints.js"></script>
+
+    <!-- <script src="~/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+    <script src="~/js/news.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#newsTicker13').breakingNews({
+                effect: 'slide-right'
+            });
+            $('.owl-carousel').owlCarousel({
+
+                autoplay: true,
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        autoplay: true,
+                        loop: true
+                    },
+                    600: {
+                        items: 3,
+                        autoplay: true,
+                        loop: true
+                    },
+                    1000: {
+                        items: 5,
+                        autoplay: true,
+                        loop: true
+                    }
+                }
+            })
+        });
+
+    </script>
+    @RenderSection("Scripts", required: false)
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWTM_RLHWAv1msPR5d3YahTPzsO1_JmHU"></script>
+</body>
+</html>
